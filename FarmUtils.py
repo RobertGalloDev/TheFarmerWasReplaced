@@ -1,4 +1,11 @@
 from KrunkUtils import *
+from KrunkTypes import *
+
+def water():
+	if get_water() < minWater and num_items(Items.Water) > minBuckets:
+		use_item(Items.Water)
+		return True
+	return False
 
 def whatCrop(x,y,pumpkinSize = 0):
 	cropId = (x+y)%numCrops

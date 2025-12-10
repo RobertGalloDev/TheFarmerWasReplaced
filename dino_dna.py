@@ -22,7 +22,10 @@ def tryStep(dir):
 	if not move(dir):
 		getBones()
 
-def tryLoop():
+def dinoLoop(worldsize = 12):
+	if worldsize != get_world_size():
+		set_world_size(worldsize)
+
 	navigateTo(0,0)
 	change_hat(Hats.Dinosaur_Hat)
 	startpoints = []
@@ -44,6 +47,3 @@ def tryLoop():
 		tryStep(South)
 		while(get_pos_x() > 0):
 			tryStep(West)
-
-set_world_size(12)
-tryLoop()

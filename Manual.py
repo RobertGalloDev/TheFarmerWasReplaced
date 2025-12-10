@@ -1,1 +1,3 @@
-harvest()
+import KrunkUtils
+
+KrunkUtils.clearMap(False)
